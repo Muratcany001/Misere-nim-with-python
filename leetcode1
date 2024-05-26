@@ -1,0 +1,26 @@
+import random
+class Solution(object):
+    def canWinNim(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        nums= []
+        user1 = n
+        sayac = random.randint(1, 10)
+        print(sayac)
+        while sayac>0: 
+            if user1<1 or user1>3:
+                return False
+                break
+            else:    
+                sayac -= user1
+            if sayac <0:
+                return False
+                break
+            elif sayac ==0:
+                return True
+############# INPUT AREA                     
+n = 2
+result = Solution().canWinNim(n)
+print(result)
